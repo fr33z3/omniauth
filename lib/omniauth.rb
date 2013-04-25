@@ -36,7 +36,7 @@ module OmniAuth
       :form_css => Form::DEFAULT_CSS,
       :test_mode => false,
       :logger => default_logger,
-      :use_ssl_for_callbacks => true,
+      :use_ssl_for_callbacks => false,
       :allowed_request_methods => [:get, :post],
       :mock_auth => {
         :default => AuthHash.new(
