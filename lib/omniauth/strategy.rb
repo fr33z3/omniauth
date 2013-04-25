@@ -472,6 +472,7 @@ module OmniAuth
       stack.inject({}){|c,h| c.merge!(h); c}
     end
     def ssl?
+      OmniAuth.config.use_ssl_for_callbacks ||
       request.env['HTTPS'] == 'on' ||
       request.env['HTTP_X_FORWARDED_SSL'] == 'on' ||
       request.env['HTTP_X_FORWARDED_SCHEME'] == 'https' ||

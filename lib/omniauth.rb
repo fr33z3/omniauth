@@ -36,6 +36,7 @@ module OmniAuth
       :form_css => Form::DEFAULT_CSS,
       :test_mode => false,
       :logger => default_logger,
+      :use_ssl_for_callbacks => true,
       :allowed_request_methods => [:get, :post],
       :mock_auth => {
         :default => AuthHash.new(
@@ -96,7 +97,7 @@ module OmniAuth
     end
 
     attr_writer :on_failure
-    attr_accessor :path_prefix, :allowed_request_methods, :form_css, :test_mode, :mock_auth, :full_host, :camelizations, :logger
+    attr_accessor :path_prefix, :allowed_request_methods, :form_css, :test_mode, :mock_auth, :full_host, :camelizations, :logger, :use_ssl_for_callbacks
   end
 
   def self.config
